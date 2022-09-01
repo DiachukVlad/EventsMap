@@ -1,0 +1,11 @@
+# Project exclude paths
+/.gradle/
+/androidApp/build/
+/androidApp/build/intermediates/javac/debug/classes/
+/buildSrc/.gradle/
+/buildSrc/build/
+/buildSrc/build/classes/kotlin/main/
+/ktorServer/build/
+/models/build/
+/models/build/classes/kotlin/jvm/main/
+/sharedClient/build/
