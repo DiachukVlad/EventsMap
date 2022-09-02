@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext
 
-suspend fun HttpClient.allEvents(): Flow<List<Event>> = withContext(Dispatchers.IO) {
+suspend fun HttpClient.allEvents(): Flow<List<Event>> = withContext(Dispatchers.Default) {
     flow {
         webSocket(
             method = HttpMethod.Get,
@@ -27,7 +27,7 @@ suspend fun HttpClient.allEvents(): Flow<List<Event>> = withContext(Dispatchers.
     }
 }
 
-suspend fun HttpClient.sendEvent(event: Event) = withContext(Dispatchers.IO){
+suspend fun HttpClient.sendEvent(event: Event) = withContext(Dispatchers.Default){
     post(Constants.SERVER_URL+"/addEvent") {
         contentType(ContentType.Application.Json)
         setBody(event)

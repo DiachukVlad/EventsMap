@@ -7,8 +7,7 @@ data class Event(
     val name: String,
     val lat: Long,
     val lon: Long,
-    val hashTags: List<String>,
-    var id: Int = 0
+    val hashTags: List<String>
 ) {
-//    var id = 0
+    var id = 0
 }

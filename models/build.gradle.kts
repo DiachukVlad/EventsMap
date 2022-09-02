@@ -1,33 +1,37 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-        google()
-    }
-}
-
 plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
+    id("org.jetbrains.kotlin.native.cocoapods")
 }
 
 group = "com.tarlad"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-    gradlePluginPortal()
-    google()
-}
-
 kotlin {
     jvm()
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "models"
+        }
+    }
+
+    cocoapods {
+        summary = "Kotlin CocoaPods library"
+        homepage = "https://github.com/Kotlin/multitarget-xcode-with-kotlin-cocoapods-sample"
+
+        podfile = project.file("../iosApp/Podfile")
+
+        ios.deploymentTarget = "13.5"
+    }
 
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+                implementation(Kotlin.serialization)
             }
         }
     }

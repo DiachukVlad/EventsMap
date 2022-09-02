@@ -1,14 +1,32 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("org.jetbrains.kotlin.native.cocoapods")
 }
 
 group = "com.tarlad"
 version = "1.0-SNAPSHOT"
 
 kotlin {
-    jvm()
     android()
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "sharedClient"
+        }
+    }
+
+    cocoapods {
+        summary = "Kotlin CocoaPods library"
+        homepage = "https://github.com/Kotlin/multitarget-xcode-with-kotlin-cocoapods-sample"
+
+        podfile = project.file("../iosApp/Podfile")
+
+        ios.deploymentTarget = "13.5"
+    }
 
     sourceSets {
         val commonMain by getting {
@@ -29,6 +47,16 @@ kotlin {
                 implementation(KtorClient.okhttp)
             }
         }
+        val iosMain by creating {
+            dependsOn(commonMain)
+            dependencies {
+                implementation(KtorClient.cio)
+            }
+        }
+
+        val iosX64Main by getting { dependsOn(iosMain) }
+        val iosArm64Main by getting { dependsOn(iosMain) }
+        val iosSimulatorArm64Main by getting { dependsOn(iosMain) }
     }
 }
 

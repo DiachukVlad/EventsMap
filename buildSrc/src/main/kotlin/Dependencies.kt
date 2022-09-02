@@ -4,7 +4,7 @@ object Versions {
 
     const val kotlinCoroutines = "1.6.4"
     const val kotlinxDateTime = "0.4.0"
-    const val kotlinSerialization = "1.3.2"
+    const val kotlinSerialization = "1.3.3"
 
     const val compose = "1.2.1"
     const val composeCompiler = "1.3.0"
@@ -30,7 +30,7 @@ object AndroidSdk {
 object Kotlin {
     const val reflect = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlinVersion}"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
-    const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2"
+    const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerialization}"
 }
 
 object Compose {

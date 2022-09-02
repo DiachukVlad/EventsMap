@@ -6,7 +6,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 
 open class BaseViewModel {
-    protected val viewModelScope = CoroutineScope(Dispatchers.Default + Job())
+    val viewModelScope = CoroutineScope(Dispatchers.Default + Job())
 
     open fun onStart() {
 

@@ -8,9 +8,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
-val events = MutableStateFlow(listOf<Event>())
+val events = MutableStateFlow(
+    listOf(
+        Event("First", 0, 0, listOf())
+            .apply { id = 0 })
+)
 val lock = Mutex()
-var maxId = 0
+var maxId = events.value.size
 
 fun Application.configureRouting() {
     routing {
@@ -27,6 +31,7 @@ fun Application.configureRouting() {
 
         webSocket("/events") {
             events.collect {
+                println(it)
                 sendSerialized(it)
             }
         }

@@ -1,0 +1,28 @@
+{
+  "name": "sharedClient",
+  "version": "1.0-SNAPSHOT",
+  "homepage": "https://github.com/Kotlin/multitarget-xcode-with-kotlin-cocoapods-sample",
+  "source": {
+    "http": ""
+  },
+  "authors": "",
+  "license": "",
+  "summary": "Kotlin CocoaPods library",
+  "vendored_frameworks": "build/cocoapods/framework/sharedClient.framework",
+  "libraries": "c++",
+  "platforms": {
+    "ios": "13.5"
+  },
+  "pod_target_xcconfig": {
+    "KOTLIN_PROJECT_PATH": ":sharedClient",
+    "PRODUCT_MODULE_NAME": "sharedClient"
+  },
+  "script_phases": [
+    {
+      "name": "Build sharedClient",
+      "execution_position": "before_compile",
+      "shell_path": "/bin/sh",
+      "script": "                if [ \"YES\" = \"$COCOAPODS_SKIP_KOTLIN_BUILD\" ]; then\n                  echo \"Skipping Gradle build task invocation due to COCOAPODS_SKIP_KOTLIN_BUILD environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../../../../../private/var/folders/6t/73m0bwhn02d9nyz05vzb62km0000gn/T/wrap3loc/gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n"
+    }
+  ]
+}
