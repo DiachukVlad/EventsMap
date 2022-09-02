@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-import models
 
 @main
 struct EventsMapApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      EventsScreen()
     }
   }
 }

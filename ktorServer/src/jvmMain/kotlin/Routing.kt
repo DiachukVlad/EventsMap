@@ -1,4 +1,4 @@
-import com.tarlad.eventsmap.models.Event
+import com.tarlad.eventsmap.shared.models.Event
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*

@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.kotlin.native.cocoapods")
+    kotlin("plugin.serialization")
 }
 
 group = "com.tarlad"
@@ -38,7 +39,10 @@ kotlin {
                     implementation(webSockets)
                 }
 
-                implementation(Kotlin.coroutinesCore)
+                with(Kotlin) {
+                    implementation(coroutinesCore)
+                    implementation(serialization)
+                }
                 implementation(project(":models"))
             }
         }

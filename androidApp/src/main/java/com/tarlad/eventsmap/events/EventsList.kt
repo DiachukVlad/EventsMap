@@ -12,7 +12,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.tarlad.eventsmap.models.Event
+import com.tarlad.eventsmap.shared.models.Event
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

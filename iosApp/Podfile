@@ -6,6 +6,6 @@ target 'EventsMap' do
   use_frameworks!
 
   # Pods for EventsMap
-    pod 'models', :path => '../models'
+#     pod 'models', :path => '../models'
     pod 'sharedClient', :path => '../sharedClient'
 end

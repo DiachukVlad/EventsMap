@@ -1,4 +1,4 @@
-package com.tarlad.eventsmap.models
+package com.tarlad.eventsmap.shared.models
 
 import kotlinx.serialization.Serializable
 
@@ -8,6 +8,6 @@ data class Event(
     val lat: Long,
     val lon: Long,
     val hashTags: List<String>
-) {
+): BaseModel() {
     var id = 0
 }

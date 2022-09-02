@@ -1,6 +1,6 @@
 package com.tarlad.eventsmap.shared.events
 
-import com.tarlad.eventsmap.models.Event
+import com.tarlad.eventsmap.shared.models.Event
 import com.tarlad.eventsmap.shared.Constants
 import io.ktor.client.*
 import io.ktor.client.plugins.websocket.*

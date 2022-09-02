@@ -1,21 +1,16 @@
 PODS:
-  - models (1.0-SNAPSHOT)
   - sharedClient (1.0-SNAPSHOT)
 
 DEPENDENCIES:
-  - models (from `../models`)
   - sharedClient (from `../sharedClient`)
 
 EXTERNAL SOURCES:
-  models:
-    :path: "../models"
   sharedClient:
     :path: "../sharedClient"
 
 SPEC CHECKSUMS:
-  models: 292c9a830825e8ccb8b09ab46f757128737fb5fd
-  sharedClient: 7b6beae55f9d476b2d85bb2e5a23f59728191a3a
+  sharedClient: 46916c45093ffe093252391d111f791fd73657ac
 
-PODFILE CHECKSUM: bdb81d1ba1f43e712e5d449f5810193d1dfae718
+PODFILE CHECKSUM: fa7f5a36b5b2bde7d32bb185749c6a6fbbcf2eb1
 
 COCOAPODS: 1.11.3
