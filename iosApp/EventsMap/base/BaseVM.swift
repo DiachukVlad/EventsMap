@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import sharedClient
+import shared
 
 class BaseVM {
   private let vm: BaseViewModel

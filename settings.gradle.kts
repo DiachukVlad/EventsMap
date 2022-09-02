@@ -11,7 +11,6 @@ pluginManagement {
 
 }
 
-include(":sharedClient")
+include(":shared")
 include(":ktorServer")
-include(":models")
 include(":androidApp")

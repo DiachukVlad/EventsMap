@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import sharedClient
+import shared
 
 extension BaseModel: Identifiable {
   

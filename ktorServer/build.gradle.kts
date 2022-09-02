@@ -35,7 +35,7 @@ kotlin {
 
 
                 implementation("ch.qos.logback:logback-classic:${Versions.logback}")
-                implementation(project(":models"))
+                implementation(project(":shared"))
             }
         }
         val jvmMain by getting

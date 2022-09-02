@@ -1,16 +1,16 @@
 PODS:
-  - sharedClient (1.0-SNAPSHOT)
+  - shared (1.0-SNAPSHOT)
 
 DEPENDENCIES:
-  - sharedClient (from `../sharedClient`)
+  - shared (from `../shared`)
 
 EXTERNAL SOURCES:
-  sharedClient:
-    :path: "../sharedClient"
+  shared:
+    :path: "../shared"
 
 SPEC CHECKSUMS:
-  sharedClient: 46916c45093ffe093252391d111f791fd73657ac
+  shared: 0438ddb99fc36f6b8cb46ef6c997c39d23e0ad0b
 
-PODFILE CHECKSUM: fa7f5a36b5b2bde7d32bb185749c6a6fbbcf2eb1
+PODFILE CHECKSUM: 39860d181ce385a1066c5f25c7c8cfff85b9758c
 
 COCOAPODS: 1.11.3

@@ -41,8 +41,7 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":sharedClient"))
-    implementation(project(":models"))
+    implementation(project(":shared"))
 
     implementation("androidx.activity:activity-compose:1.5.1")
     implementation("com.google.android.material:material:1.6.1")

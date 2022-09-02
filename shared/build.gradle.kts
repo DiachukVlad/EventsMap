@@ -16,9 +16,10 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "sharedClient"
+            baseName = "shared"
         }
     }
+    jvm()
 
     cocoapods {
         summary = "Kotlin CocoaPods library"
@@ -43,7 +44,6 @@ kotlin {
                     implementation(coroutinesCore)
                     implementation(serialization)
                 }
-                implementation(project(":models"))
             }
         }
         val androidMain by getting {

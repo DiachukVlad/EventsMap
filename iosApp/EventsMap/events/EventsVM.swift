@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import sharedClient
+import shared
 import UIKit
 
 class EventsVM: BaseVM, ObservableObject {

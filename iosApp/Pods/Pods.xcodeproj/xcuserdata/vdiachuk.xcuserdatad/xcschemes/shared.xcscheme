@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3DCEDAAD35AACE2E067551079F4AEDD"
-               BuildableName = "sharedClient"
-               BlueprintName = "sharedClient"
+               BlueprintIdentifier = "8777C9F6889E59EFFD631D80AEE9048B"
+               BuildableName = "shared"
+               BlueprintName = "shared"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

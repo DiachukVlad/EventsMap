@@ -13,8 +13,7 @@
             <option value="$PROJECT_DIR$/androidApp" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/ktorServer" />
-            <option value="$PROJECT_DIR$/models" />
-            <option value="$PROJECT_DIR$/sharedClient" />
+            <option value="$PROJECT_DIR$/shared" />
           </set>
         </option>
       </GradleProjectSettings>

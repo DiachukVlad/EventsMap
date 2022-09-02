@@ -7,5 +7,5 @@ target 'EventsMap' do
 
   # Pods for EventsMap
 #     pod 'models', :path => '../models'
-    pod 'sharedClient', :path => '../sharedClient'
+    pod 'shared', :path => '../shared'
 end
