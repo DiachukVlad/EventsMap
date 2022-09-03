@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import shared
 
 @main
 struct EventsMapApp: App {
+  init(){
+    KoinHelperKt.doInitKoin()
+  }
+  
   var body: some Scene {
     WindowGroup {
       EventsScreen()

@@ -19,7 +19,7 @@ class EventsVM: BaseVM, ObservableObject {
 
   
   init() {
-    vm = EventsViewModel(client: ClientExteKt.client)
+    vm = KoinHelper().eventsVM()
     super.init(vm)
     
     vm.observeEvents { newEvents in

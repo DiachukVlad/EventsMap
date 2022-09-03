@@ -9,8 +9,6 @@ open class BaseViewModel {
     }
 
     open fun onClose() {
-        viewModelScope.coroutineContext.cancelChildren(ClosedUIScreenException)
+        viewModelScope.coroutineContext.cancelChildren(CancellationException("viewClosed"))
     }
 }
-
-object ClosedUIScreenException: CancellationException(null)
