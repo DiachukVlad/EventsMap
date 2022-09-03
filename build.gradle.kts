@@ -21,5 +21,6 @@ allprojects {
         gradlePluginPortal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         google()
+        maven("https://maven.pkg.github.com/DiachukVlad/AndroidComposeRouting")
     }
 }

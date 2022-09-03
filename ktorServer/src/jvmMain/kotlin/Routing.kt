@@ -25,13 +25,12 @@ fun Application.configureRouting() {
         post("/addEvent") {
             val event: Event = call.receive()
             lock.withLock {
-                events.tryEmit(events.value + event.apply { id = maxId++ })
+                events.emit(events.value + event.apply { id = maxId++ })
             }
         }
 
         webSocket("/events") {
             events.collect {
-                println(it)
                 sendSerialized(it)
             }
         }

@@ -38,19 +38,27 @@ kotlin {
                     implementation(serialization)
                     implementation(contentNegotiation)
                     implementation(webSockets)
-                    implementation(okhttp)
                 }
 
                 with(Kotlin) {
                     implementation(coroutinesCore)
                     implementation(serialization)
                 }
+
+                implementation(Koin.core)
             }
         }
         val androidMain by getting {
-//            dependencies {
-//                implementation(KtorClient.okhttp)
-//            }
+            dependencies {
+                implementation(KtorClient.okhttp)
+                implementation(Koin.android)
+                implementation(KtorClient.cio)
+            }
+        }
+        val jvmMain by getting {
+            dependencies {
+                implementation(KtorClient.okhttp)
+            }
         }
         val iosMain by creating {
             dependsOn(commonMain)

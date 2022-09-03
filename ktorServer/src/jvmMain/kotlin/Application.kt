@@ -12,8 +12,6 @@ import io.ktor.server.plugins.doublereceive.*
 import kotlinx.serialization.json.Json
 
 fun main() {
-    println("qweqweqwe")
-
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
         install(CORS) {
             allowMethod(HttpMethod.Get)

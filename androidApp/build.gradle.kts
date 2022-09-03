@@ -46,6 +46,8 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.5.1")
     implementation("com.google.android.material:material:1.6.1")
 
+    implementation("com.diachuk.routing:android-compose-routing:1.0")
+
     with (Compose) {
         implementation(compiler)
         implementation(ui)
@@ -70,4 +72,6 @@ dependencies {
         implementation(contentNegotiation)
         implementation(android)
     }
+    implementation(KtorClient.okhttp)
+    implementation(KtorClient.cio)
 }
