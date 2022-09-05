@@ -17,11 +17,11 @@ class EventsViewModel(private val client: HttpClient) : BaseViewModel() {
     override fun onStart() {
         viewModelScope.launch {
             try {
-                client.allEvents()
-                    .collect {
-                        name.emit(it.size.toString())
-                        events.emit(it)
-                    }
+//                client.allEvents()
+//                    .collect {
+//                        name.emit(it.size.toString())
+//                        events.emit(it)
+//                    }
             } catch (e: Exception) {
                 println(e)
                 error.emit(e.message)

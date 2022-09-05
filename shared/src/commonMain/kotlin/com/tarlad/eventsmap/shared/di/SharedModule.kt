@@ -2,6 +2,7 @@ package com.tarlad.eventsmap.shared.di
 
 import com.tarlad.eventsmap.shared.ClientSpecific
 import com.tarlad.eventsmap.shared.events.EventsViewModel
+import com.tarlad.eventsmap.shared.home.HomeViewModel
 import io.ktor.client.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.plugins.websocket.*
@@ -12,7 +13,7 @@ import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
 val sharedModule = module {
-    single {
+    single<HttpClient> {
         HttpClient(ClientSpecific.ktorEngine) {
             install(ContentNegotiation) {
                 json(Json{
@@ -29,4 +30,5 @@ val sharedModule = module {
 
     // ViewModels
     singleOf(::EventsViewModel)
+    singleOf(::HomeViewModel)
 }

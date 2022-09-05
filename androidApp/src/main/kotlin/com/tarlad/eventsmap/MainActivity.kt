@@ -13,7 +13,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             EventsMapTheme {
-                RoutingHost(routing = Routing(HomeScreen))
+                AppStrings {
+                    RoutingHost(routing = Routing(HomeScreen))
+                }
             }
         }
     }
