@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.diachuk.routing.Routing
 import com.diachuk.routing.RoutingHost
-import com.tarlad.eventsmap.home.HomScreen
+import com.tarlad.eventsmap.home.HomeScreen
 import com.tarlad.eventsmap.ui.theme.EventsMapTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             EventsMapTheme {
-                RoutingHost(routing = Routing(HomScreen))
+                RoutingHost(routing = Routing(HomeScreen))
             }
         }
     }

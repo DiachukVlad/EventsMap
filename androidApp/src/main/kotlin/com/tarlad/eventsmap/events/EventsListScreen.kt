@@ -17,7 +17,7 @@ import com.tarlad.eventsmap.shared.events.EventsViewModel
 import com.tarlad.eventsmap.shared.models.Event
 import org.koin.androidx.compose.get
 
-val EventsListScreen = createRoute<EventsViewModel> { vm ->
+val EventsListScreen = createRoute<EventsViewModel> {
     Box(Modifier.fillMaxSize()) {
         EventsList()
     }
@@ -32,7 +32,7 @@ fun EventsList(vm: EventsViewModel = get()) {
 
         CircularProgressIndicator()
         LazyColumn(modifier = Modifier.fillMaxWidth()) {
-            items(events, key = { it.id }) {
+            items(events, key = { it.id?:"def" }) {
                 EventItem(
                     Modifier
                         .fillMaxWidth()

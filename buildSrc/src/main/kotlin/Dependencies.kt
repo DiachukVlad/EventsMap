@@ -18,6 +18,8 @@ object Versions {
 
     const val ktor = "2.1.0"
     const val logback = "1.2.3"
+
+    const val mongodb = "4.7.0"
 }
 
 
@@ -48,6 +50,7 @@ object Compose {
 
 object Koin {
     const val core = "io.insert-koin:koin-core:${Versions.koin}"
+    const val ktor = "io.insert-koin:koin-ktor:${Versions.koin}"
     const val test = "io.insert-koin:koin-test:${Versions.koin}"
     const val android = "io.insert-koin:koin-android:${Versions.koin}"
     const val compose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"

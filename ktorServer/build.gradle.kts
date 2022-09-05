@@ -1,6 +1,6 @@
 plugins {
     application
-    kotlin("multiplatform")
+    kotlin("jvm")
 }
 
 group = "com.tarlad.eventsmap"
@@ -14,32 +14,28 @@ repositories {
     mavenCentral()
 }
 
-kotlin {
-    jvm {
-        withJava()
+dependencies {
+    implementation(Kotlin.coroutinesCore)
+    implementation(Kotlin.serialization)
+
+    with(KtorServer) {
+        implementation(core)
+        implementation(contentNegotiation)
+        implementation(netty)
+        implementation(cors)
+        implementation(doubleReceive)
+        implementation(serialization)
+        implementation(webSockets)
     }
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(Kotlin.coroutinesCore)
-
-                with(KtorServer) {
-                    implementation(core)
-                    implementation(contentNegotiation)
-                    implementation(netty)
-                    implementation(cors)
-                    implementation(doubleReceive)
-                    implementation(serialization)
-                    implementation(webSockets)
-                }
+    implementation(Koin.core)
+    implementation(Koin.ktor)
 
 
-                implementation("ch.qos.logback:logback-classic:${Versions.logback}")
-                implementation(project(":shared"))
-            }
-        }
-        val jvmMain by getting
-    }
+    implementation("ch.qos.logback:logback-classic:${Versions.logback}")
+    implementation("org.litote.kmongo:kmongo-coroutine-serialization:${Versions.mongodb}")
+    implementation("org.litote.kmongo:kmongo-id-serialization:${Versions.mongodb}")
+    implementation("org.litote.kmongo:kmongo:${Versions.mongodb}")
+    implementation(project(":shared"))
 }
 
 tasks {

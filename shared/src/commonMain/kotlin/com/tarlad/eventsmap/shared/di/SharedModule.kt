@@ -16,8 +16,9 @@ val sharedModule = module {
         HttpClient(ClientSpecific.ktorEngine) {
             install(ContentNegotiation) {
                 json(Json{
-                    isLenient = true
+                    isLenient = false
                     prettyPrint = true
+                    encodeDefaults = true
                 })
             }
             install(WebSockets) {
