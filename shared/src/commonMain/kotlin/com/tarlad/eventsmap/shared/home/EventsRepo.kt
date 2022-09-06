@@ -1,4 +1,4 @@
-package com.tarlad.eventsmap.shared.events
+package com.tarlad.eventsmap.shared.home
 
 import com.tarlad.eventsmap.shared.ClientConstants
 import com.tarlad.eventsmap.shared.CustomDispatchers

@@ -1,6 +1,5 @@
 package com.tarlad.eventsmap.shared
 
-import com.tarlad.eventsmap.shared.events.EventsViewModel
 import com.tarlad.eventsmap.shared.models.Event
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

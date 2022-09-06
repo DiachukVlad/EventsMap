@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.MaterialTheme
@@ -24,8 +25,9 @@ fun Search() {
 
     Box(
         modifier = Modifier
+            .systemBarsPadding()
             .fillMaxWidth()
-            .padding(12.dp)
+            .padding(horizontal = 12.dp)
             .clip(RoundedCornerShape(12.dp))
             .background(MaterialTheme.colors.surface)
             .padding(12.dp)

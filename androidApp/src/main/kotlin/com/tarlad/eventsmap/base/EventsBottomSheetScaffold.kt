@@ -53,6 +53,7 @@ fun EventsBottomSheetScaffold(
 
     BoxWithConstraints(
         modifier = Modifier
+            .systemBarsPadding()
             .offset { IntOffset(0, offset) }
             .fillMaxSize()
     ) {

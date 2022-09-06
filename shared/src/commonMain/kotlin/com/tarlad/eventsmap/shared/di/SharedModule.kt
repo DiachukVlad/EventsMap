@@ -1,7 +1,6 @@
 package com.tarlad.eventsmap.shared.di
 
 import com.tarlad.eventsmap.shared.ClientSpecific
-import com.tarlad.eventsmap.shared.events.EventsViewModel
 import com.tarlad.eventsmap.shared.home.HomeViewModel
 import io.ktor.client.*
 import io.ktor.client.plugins.contentnegotiation.*
@@ -29,6 +28,5 @@ val sharedModule = module {
     }
 
     // ViewModels
-    singleOf(::EventsViewModel)
     singleOf(::HomeViewModel)
 }

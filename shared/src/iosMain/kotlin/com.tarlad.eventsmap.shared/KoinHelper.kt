@@ -1,7 +1,6 @@
 package com.tarlad.eventsmap.shared
 
 import com.tarlad.eventsmap.shared.di.sharedModule
-import com.tarlad.eventsmap.shared.events.EventsViewModel
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.core.context.startKoin
