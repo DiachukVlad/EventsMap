@@ -10,10 +10,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
+import com.diachuk.routing.LocalRouting
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.*
+import com.tarlad.eventsmap.addEvent.AddEventScreen
 import com.tarlad.eventsmap.base.toDp
+import com.tarlad.eventsmap.shared.addEvent.AddEventViewModel
 import com.tarlad.eventsmap.shared.home.HomeViewModel
 import kotlinx.coroutines.flow.map
 import org.koin.androidx.compose.get
@@ -31,7 +34,7 @@ fun EventsMap(bottomPadding: Int, vm: HomeViewModel = get()) {
 
     LaunchedEffect(tappedLoc) {
         tappedLoc?.let {
-            positionState.animate(CameraUpdateFactory.newLatLngZoom(it, 15f))
+            positionState.animate(CameraUpdateFactory.newLatLng(it))
         }
     }
 
@@ -64,18 +67,25 @@ fun EventsMap(bottomPadding: Int, vm: HomeViewModel = get()) {
             }
         }
 
-        if (tappedLoc != null) AddEventButton(bottomPadding, vm)
+        if (tappedLoc != null) AddEventButton(bottomPadding)
     }
 }
 
 @Composable
-fun BoxScope.AddEventButton(bottomPadding: Int, vm: HomeViewModel = get()) {
+fun BoxScope.AddEventButton(bottomPadding: Int) {
+    val routing = LocalRouting
+    val vm: HomeViewModel = get()
+    val addEventViewModel: AddEventViewModel = get()
+
     FloatingActionButton(
         modifier = Modifier
             .align(Alignment.BottomEnd)
             .systemBarsPadding()
             .padding(bottom = bottomPadding.toDp() + 16.dp, end = 16.dp),
-        onClick = vm::addEventClick
+        onClick = {
+            vm.tappedLocation.value?.let { addEventViewModel.selectedLocation.tryEmit(it) }
+            routing.push(AddEventScreen)
+        }
     ) {
         Icon(imageVector = Icons.Default.Add, contentDescription = "Add event")
     }

@@ -13,7 +13,7 @@ suspend fun HttpClient.allEvents(): List<Event> =
     get(ClientConstants.SERVER_URL + "/events").body()
 
 
-suspend fun HttpClient.sendEvent(event: Event) = withContext(CustomDispatchers.io) {
+suspend fun HttpClient.addEvent(event: Event) = withContext(CustomDispatchers.io) {
     post(ClientConstants.SERVER_URL + "/events") {
         contentType(ContentType.Application.Json)
         setBody(event)

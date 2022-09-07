@@ -1,11 +1,8 @@
 package com.tarlad.eventsmap.base
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.animation.Crossfade
-import androidx.compose.animation.core.CubicBezierEasing
-import androidx.compose.animation.core.Easing
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.layout.*
@@ -14,9 +11,7 @@ import androidx.compose.material.SwipeableState
 import androidx.compose.material.rememberSwipeableState
 import androidx.compose.material.swipeable
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.unit.IntOffset
 import kotlinx.coroutines.launch
@@ -102,24 +97,24 @@ fun EventsBottomSheetScaffold(
                     .fillMaxSize()
                     .background(MaterialTheme.colors.background)
             ) {
-                Crossfade(
-                    targetState = offset > smallOffset - 200,
-                    animationSpec = tween(easing = CubicBezierEasing(0.0f, 1.0f, 0.0f, 1.0f))
-                ) { isSmallScreen ->
-                    if (isSmallScreen) {
-                        Box(modifier = Modifier
-                            .fillMaxWidth()
-                            .onSizeChanged {
-                                smallPartHeight = it.height.toFloat()
-                            }
-                        ) {
-                            horizontalContent()
-                        }
-                    } else {
+                Box(modifier = Modifier
+                    .fillMaxWidth()
+                    .onSizeChanged {
+                        smallPartHeight = it.height.toFloat()
+                    }
+                ) {
+                    horizontalContent()
+                }
+                androidx.compose.animation.AnimatedVisibility(
+                    visible = offset <= smallOffset - 200,
+                    enter = fadeIn(),
+                    exit = fadeOut()
+                ) {
+                    Box(
+                        modifier = Modifier.background(MaterialTheme.colors.background)) {
                         verticalContent()
                     }
                 }
-
             }
         }
     }

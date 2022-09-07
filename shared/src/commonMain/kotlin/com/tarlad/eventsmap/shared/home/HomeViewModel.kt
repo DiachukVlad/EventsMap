@@ -24,6 +24,4 @@ class HomeViewModel(private val client: HttpClient): BaseViewModel() {
     }
 
     fun onLongClick(lat: Double, lon: Double) = tappedLocation.tryEmit(lat to lon)
-    fun addEventClick() = showAddEventSheet.tryEmit(true)
-    fun onAddEventSheetClosed() = showAddEventSheet.tryEmit(false)
 }

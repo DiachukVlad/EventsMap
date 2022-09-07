@@ -13,7 +13,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusEvent
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.tarlad.eventsmap.LocalStrings
 
@@ -29,17 +28,21 @@ fun Search() {
             .fillMaxWidth()
             .padding(horizontal = 12.dp)
             .clip(RoundedCornerShape(12.dp))
-            .background(MaterialTheme.colors.surface)
+            .background(MaterialTheme.colors.background)
             .padding(12.dp)
     ) {
         if (searchText.isEmpty() && !focused) {
-            Text(text = strings.search, style = MaterialTheme.typography.h5, color = Color.Black.copy(alpha = 0.5f))
+            Text(
+                text = strings.search,
+                style = MaterialTheme.typography.h5,
+                color = MaterialTheme.colors.onBackground.copy(alpha = 0.5f)
+            )
         }
         BasicTextField(
             modifier = Modifier.onFocusEvent { focused = it.isFocused },
             value = searchText,
             onValueChange = { searchText = it },
-            textStyle = MaterialTheme.typography.h5
+            textStyle = MaterialTheme.typography.h5.copy(color = MaterialTheme.colors.onBackground)
         )
     }
 }
