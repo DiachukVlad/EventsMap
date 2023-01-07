@@ -18,8 +18,10 @@ class HomeVM: BaseVM, ObservableObject {
         vm = KoinHelper().homeVM()
         super.init(vm)
         vm.observeState(callback: { consultancies in
-            self.consultancies.removeAll()
-            self.consultancies.append(contentsOf: consultancies)
+            DispatchQueue.main.async {
+                self.consultancies.removeAll()
+                self.consultancies.append(contentsOf: consultancies)
+            }
         })
     }
 }

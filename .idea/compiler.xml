@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="16" />
+    <bytecodeTargetLevel target="16">
+      <module name="EventsMap.androidApp" target="17" />
+      <module name="EventsMap.buildSrc" target="17" />
+      <module name="EventsMap.buildSrc.main" target="17" />
+      <module name="EventsMap.buildSrc.test" target="17" />
+      <module name="EventsMap.shared" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
