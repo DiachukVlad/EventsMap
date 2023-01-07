@@ -16,7 +16,7 @@ struct EventsMapApp: App {
   
   var body: some Scene {
     WindowGroup {
-      EventsScreen()
+        HomeScreen()
     }
   }
 }

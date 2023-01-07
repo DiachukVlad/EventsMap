@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct EventsScreen: View {
-  @StateObject var vm = EventsVM()
+struct HomeScreen: View {
+  @StateObject var vm = HomeVM()
     
   var body: some View {
     VStack {
-      EventsList()
+        Text("qwe")
     }
     .environmentObject(vm)
     .onAppear{
@@ -25,8 +25,8 @@ struct EventsScreen: View {
 }
 
 
-struct EventsScreen_Previews: PreviewProvider {
-  static var previews: some View {
-    EventsScreen()
-  }
+struct HomeScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreen()
+    }
 }

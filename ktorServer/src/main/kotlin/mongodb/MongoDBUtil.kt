@@ -1,5 +1,5 @@
 package mongodb
 
 object MongoDBUtil {
-    const val DB_NAME = "test"
+    const val DB_NAME = "hiremate_db"
 }
