@@ -1,4 +1,3 @@
-
 object Versions {
     const val kotlinVersion = "1.7.10"
 
@@ -16,7 +15,7 @@ object Versions {
 
     const val androidGradle = "7.2.2"
 
-    const val ktor = "2.1.0"
+    const val ktor = "2.2.2"
     const val logback = "1.2.3"
 
     const val exposed = "0.40.1"
@@ -76,6 +75,8 @@ object KtorServer {
     const val doubleReceive = "io.ktor:ktor-server-double-receive:${Versions.ktor}"
     const val serialization = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}"
     const val webSockets = "io.ktor:ktor-server-websockets:${Versions.ktor}"
+    const val auth = "io.ktor:ktor-server-auth:${Versions.ktor}"
+    const val jwt = "io.ktor:ktor-server-auth-jwt:${Versions.ktor}"
 }
 
 object Exposed {
