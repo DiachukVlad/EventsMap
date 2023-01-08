@@ -32,9 +32,15 @@ dependencies {
 
 
     implementation("ch.qos.logback:logback-classic:${Versions.logback}")
-    implementation("org.litote.kmongo:kmongo-coroutine-serialization:${Versions.mongodb}")
-    implementation("org.litote.kmongo:kmongo-id-serialization:${Versions.mongodb}")
-    implementation("org.litote.kmongo:kmongo:${Versions.mongodb}")
+
+    with(Exposed) {
+        implementation(core)
+        implementation(dao)
+        implementation(jdbc)
+    }
+
+    implementation("org.xerial:sqlite-jdbc:3.40.0.0")
+
     implementation(project(":shared"))
 }
 
