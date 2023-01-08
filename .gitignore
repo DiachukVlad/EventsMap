@@ -9,3 +9,5 @@
 /models/build/
 /models/build/classes/kotlin/jvm/main/
 /shared/build/
+local.properties
+.idea/compiler.xml

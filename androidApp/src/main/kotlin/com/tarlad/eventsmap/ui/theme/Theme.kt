@@ -37,7 +37,7 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun EventsMapTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun HireMateTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors =
 //        if (darkTheme) {
         DarkColorPalette
@@ -46,7 +46,7 @@ fun EventsMapTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composa
 //    }
 
     MaterialTheme(
-            colors = colors,
-            content = content
+        colors = colors,
+        content = content
     )
 }
