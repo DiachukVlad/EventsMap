@@ -19,6 +19,8 @@ object Versions {
     const val ktor = "2.1.0"
     const val logback = "1.2.3"
 
+    const val exposed = "0.40.1"
+
     const val mongodb = "4.7.0"
 }
 
@@ -76,4 +78,8 @@ object KtorServer {
     const val webSockets = "io.ktor:ktor-server-websockets:${Versions.ktor}"
 }
 
-
+object Exposed {
+    const val core = "org.jetbrains.exposed:exposed-core:${Versions.exposed}"
+    const val dao = "org.jetbrains.exposed:exposed-dao:${Versions.exposed}"
+    const val jdbc = "org.jetbrains.exposed:exposed-jdbc:${Versions.exposed}"
+}

@@ -11,3 +11,4 @@
 /shared/build/
 local.properties
 .idea/compiler.xml
+/test.sql

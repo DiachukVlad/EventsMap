@@ -1,6 +1,4 @@
-
 import di.serverModule
-import io.ktor.server.websocket.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.*
 import io.ktor.serialization.kotlinx.json.*
@@ -10,11 +8,14 @@ import io.ktor.server.netty.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.plugins.doublereceive.*
+import io.ktor.server.websocket.*
 import kotlinx.serialization.json.Json
+import org.jetbrains.exposed.sql.Database
 import org.koin.ktor.plugin.Koin
-import org.litote.kmongo.id.serialization.IdKotlinXSerializationModule
 
 fun main() {
+    Database.connect("jdbc:sqlite:test.sql", "org.sqlite.JDBC")
+
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
         install(CORS) {
             allowMethod(HttpMethod.Get)
@@ -36,14 +37,13 @@ fun main() {
             json(Json {
                 prettyPrint = true
                 isLenient = true
-                serializersModule = IdKotlinXSerializationModule
             })
         }
         install(WebSockets) {
             contentConverter = KotlinxWebsocketSerializationConverter(Json)
         }
 
-        install(DoubleReceive){}
+        install(DoubleReceive) {}
 
         configureRouting()
 
