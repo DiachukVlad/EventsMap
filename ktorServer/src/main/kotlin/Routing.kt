@@ -1,3 +1,4 @@
+import auth.authRouting
 import consultancy.consultancyRouting
 import io.ktor.server.application.*
 import io.ktor.server.response.*
@@ -10,5 +11,6 @@ fun Application.configureRouting() {
         }
 
         consultancyRouting()
+        authRouting()
     }
 }

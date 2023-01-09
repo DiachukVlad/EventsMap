@@ -10,12 +10,11 @@ object Consultancies : IntIdTable() {
     val name = varchar("name", 50)
 }
 
-class ConsultancyEntity(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<ConsultancyEntity>(Consultancies)
+class ConsultancyDao(id: EntityID<Int>) : IntEntity(id) {
+    companion object : IntEntityClass<ConsultancyDao>(Consultancies)
 
     var name by Consultancies.name
 }
 
-fun ConsultancyEntity.asConsultancy() = Consultancy(name)
-fun List<ConsultancyEntity>.asConsultancies() = this.map { it.asConsultancy() }
-fun Iterable<ConsultancyEntity>.asConsultancies() = this.map { it.asConsultancy() }
+fun ConsultancyDao.asConsultancy() = Consultancy(id.value, name)
+fun Iterable<ConsultancyDao>.asConsultancies() = this.map { it.asConsultancy() }
