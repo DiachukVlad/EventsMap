@@ -11,7 +11,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.EventsMap"
             android:usesCleartextTraffic="true"
-            android:name=".EventsMapApp">
+            android:name=".HireMateApp">
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBK8US-YGstjEWomPDbhPn_Qrd2wb_vcrA"/>
 
         <activity

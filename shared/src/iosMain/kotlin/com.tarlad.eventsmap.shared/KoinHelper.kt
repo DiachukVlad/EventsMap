@@ -1,5 +1,6 @@
 package com.tarlad.eventsmap.shared
 
+import com.tarlad.eventsmap.shared.consultancy.HomeViewModel
 import com.tarlad.eventsmap.shared.di.sharedModule
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -11,6 +12,6 @@ fun initKoin(){
     }
 }
 class KoinHelper: KoinComponent {
-    private val eventsViewModel: EventsViewModel by inject()
-    fun eventsVM(): EventsViewModel = eventsViewModel
+    private val eventsViewModel: HomeViewModel by inject()
+    fun homeVM(): HomeViewModel = eventsViewModel
 }

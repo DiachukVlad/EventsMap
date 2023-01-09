@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E7285F828C15C8400B75B48 /* EventsMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7285F728C15C8400B75B48 /* EventsMapApp.swift */; };
-		2E7285FA28C15C8400B75B48 /* EventsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7285F928C15C8400B75B48 /* EventsScreen.swift */; };
+		2E7285F828C15C8400B75B48 /* HireMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7285F728C15C8400B75B48 /* HireMateApp.swift */; };
+		2E7285FA28C15C8400B75B48 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7285F928C15C8400B75B48 /* HomeScreen.swift */; };
 		2E7285FC28C15C8500B75B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E7285FB28C15C8500B75B48 /* Assets.xcassets */; };
 		2E7285FF28C15C8500B75B48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E7285FE28C15C8500B75B48 /* Preview Assets.xcassets */; };
-		2E72860728C1F08F00B75B48 /* EventsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72860628C1F08F00B75B48 /* EventsVM.swift */; };
+		2E72860728C1F08F00B75B48 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72860628C1F08F00B75B48 /* HomeVM.swift */; };
 		2E72860A28C1F12000B75B48 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72860928C1F12000B75B48 /* BaseVM.swift */; };
-		2E72860C28C1F6D400B75B48 /* EventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72860B28C1F6D400B75B48 /* EventsList.swift */; };
 		2E72860E28C1F9AE00B75B48 /* BaseModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72860D28C1F9AE00B75B48 /* BaseModelExtension.swift */; };
 		B3261524568D5F03DC990C38 /* Pods_EventsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDBBEDA48B314BDF9F96BD8 /* Pods_EventsMap.framework */; };
 /* End PBXBuildFile section */
@@ -21,13 +20,12 @@
 /* Begin PBXFileReference section */
 		2DDBBEDA48B314BDF9F96BD8 /* Pods_EventsMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventsMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E7285F428C15C8400B75B48 /* EventsMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E7285F728C15C8400B75B48 /* EventsMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapApp.swift; sourceTree = "<group>"; };
-		2E7285F928C15C8400B75B48 /* EventsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsScreen.swift; sourceTree = "<group>"; };
+		2E7285F728C15C8400B75B48 /* HireMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HireMateApp.swift; sourceTree = "<group>"; };
+		2E7285F928C15C8400B75B48 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		2E7285FB28C15C8500B75B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E7285FE28C15C8500B75B48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2E72860628C1F08F00B75B48 /* EventsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVM.swift; sourceTree = "<group>"; };
+		2E72860628C1F08F00B75B48 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		2E72860928C1F12000B75B48 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
-		2E72860B28C1F6D400B75B48 /* EventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsList.swift; sourceTree = "<group>"; };
 		2E72860D28C1F9AE00B75B48 /* BaseModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelExtension.swift; sourceTree = "<group>"; };
 		9B872BAC644590146247063D /* Pods-EventsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsMap.debug.xcconfig"; path = "Target Support Files/Pods-EventsMap/Pods-EventsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		AABC9082A321B7CC51C9810F /* Pods-EventsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsMap.release.xcconfig"; path = "Target Support Files/Pods-EventsMap/Pods-EventsMap.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,7 +66,7 @@
 			children = (
 				2E72860828C1F11600B75B48 /* base */,
 				2E72860528C1EF7000B75B48 /* events */,
-				2E7285F728C15C8400B75B48 /* EventsMapApp.swift */,
+				2E7285F728C15C8400B75B48 /* HireMateApp.swift */,
 				2E7285FB28C15C8500B75B48 /* Assets.xcassets */,
 				2E7285FD28C15C8500B75B48 /* Preview Content */,
 			);
@@ -86,9 +84,8 @@
 		2E72860528C1EF7000B75B48 /* events */ = {
 			isa = PBXGroup;
 			children = (
-				2E7285F928C15C8400B75B48 /* EventsScreen.swift */,
-				2E72860628C1F08F00B75B48 /* EventsVM.swift */,
-				2E72860B28C1F6D400B75B48 /* EventsList.swift */,
+				2E7285F928C15C8400B75B48 /* HomeScreen.swift */,
+				2E72860628C1F08F00B75B48 /* HomeVM.swift */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -215,12 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E72860C28C1F6D400B75B48 /* EventsList.swift in Sources */,
-				2E7285FA28C15C8400B75B48 /* EventsScreen.swift in Sources */,
+				2E7285FA28C15C8400B75B48 /* HomeScreen.swift in Sources */,
 				2E72860A28C1F12000B75B48 /* BaseVM.swift in Sources */,
-				2E7285F828C15C8400B75B48 /* EventsMapApp.swift in Sources */,
+				2E7285F828C15C8400B75B48 /* HireMateApp.swift in Sources */,
 				2E72860E28C1F9AE00B75B48 /* BaseModelExtension.swift in Sources */,
-				2E72860728C1F08F00B75B48 /* EventsVM.swift in Sources */,
+				2E72860728C1F08F00B75B48 /* HomeVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EventsMap/Preview Content\"";
-				DEVELOPMENT_TEAM = S54GCD2992;
+				DEVELOPMENT_TEAM = 7U8HYJ2J7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -380,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EventsMap/Preview Content\"";
-				DEVELOPMENT_TEAM = S54GCD2992;
+				DEVELOPMENT_TEAM = 7U8HYJ2J7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

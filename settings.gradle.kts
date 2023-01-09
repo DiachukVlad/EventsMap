@@ -1,4 +1,4 @@
-rootProject.name = "EventsMap"
+rootProject.name = "HireMate"
 
 pluginManagement {
     repositories {
@@ -12,5 +12,5 @@ pluginManagement {
 }
 
 include(":shared")
-include(":ktorServer")
 include(":androidApp")
+include(":ktorServer")

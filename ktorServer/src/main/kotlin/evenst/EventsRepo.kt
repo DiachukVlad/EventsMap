@@ -1,5 +1,0 @@
-package evenst
-
-class EventsRepo() {
-
-}

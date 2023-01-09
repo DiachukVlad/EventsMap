@@ -3,11 +3,11 @@ plugins {
     kotlin("jvm")
 }
 
-group = "com.tarlad.eventsmap"
+group = "com.hiremate.server"
 version = "1.0-SNAPSHOT"
 
 application {
-    mainClass.set("ApplicationKt")
+    mainClass.set("com.hiremate.server.ApplicationKt")
 }
 
 repositories {
@@ -26,15 +26,24 @@ dependencies {
         implementation(doubleReceive)
         implementation(serialization)
         implementation(webSockets)
+        implementation(auth)
+        implementation(jwt)
+        implementation("io.ktor:ktor-server-config-yaml:${Versions.ktor}")
+
     }
     implementation(Koin.core)
     implementation(Koin.ktor)
 
-
     implementation("ch.qos.logback:logback-classic:${Versions.logback}")
-    implementation("org.litote.kmongo:kmongo-coroutine-serialization:${Versions.mongodb}")
-    implementation("org.litote.kmongo:kmongo-id-serialization:${Versions.mongodb}")
-    implementation("org.litote.kmongo:kmongo:${Versions.mongodb}")
+
+    with(Exposed) {
+        implementation(core)
+        implementation(dao)
+        implementation(jdbc)
+    }
+
+    implementation("org.xerial:sqlite-jdbc:3.40.0.0")
+
     implementation(project(":shared"))
 }
 
