@@ -22,3 +22,4 @@ class UserDao(id: EntityID<Int>) : IntEntity(id) {
 }
 
 fun UserDao.asUser() = User(email = email, pass = pass, role = role, id = id.value)
+fun Iterable<UserDao>.asUsers() = this.map { it.asUser() }

@@ -25,6 +25,11 @@ fun Routing.authRouting() {
 
 private fun Routing.login() {
     val appConfig: AppConfig by inject()
+    get("/users", acceptedRoles = hashSetOf(Role.Public)) {
+        val users = transaction {
+            UserDao.all().asUsers()
+        }
+    }
     post("/login") {
         val userCredentials = call.receive<User>()
 
@@ -35,7 +40,9 @@ private fun Routing.login() {
         }
 
         // Get UserEntity
-        val user = transaction { UserDao.find(Users.email eq userCredentials.email).firstOrNull()?.asUser() }
+        val user = transaction {
+            UserDao.find(Users.email eq userCredentials.email).firstOrNull()?.asUser()
+        }
         if (user == null) {
             call.respond(HttpStatusCode.NotFound)
             return@post

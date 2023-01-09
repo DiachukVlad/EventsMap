@@ -17,7 +17,8 @@ class UserContext(
 )
 
 fun PipelineContext<Unit, ApplicationCall>.getUser(): User {
-    val userId: Int? = call.principal<JWTPrincipal>()?.payload?.claims?.get(USER_ID_CLAIM_NAME)?.asInt()
+    val userId: Int? =
+        call.principal<JWTPrincipal>()?.payload?.claims?.get(USER_ID_CLAIM_NAME)?.asInt()
 
     return userId?.let { id ->
         transaction {

@@ -7,7 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat
 import com.diachuk.routing.Routing
 import com.diachuk.routing.RoutingHost
-import com.tarlad.eventsmap.home.HomeScreen
+import com.tarlad.eventsmap.auth.AuthScreen
 import com.tarlad.eventsmap.ui.theme.HireMateTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             HireMateTheme {
                 AppStrings {
-                    RoutingHost(routing = Routing(HomeScreen))
+                    RoutingHost(routing = Routing(AuthScreen))
                 }
             }
         }
